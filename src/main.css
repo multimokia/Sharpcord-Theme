@@ -1,0 +1,539 @@
+.nowPlayingColumn-2sl4cE, .da-nowPlayingColumn {display:none !important;}
+.emojiSeparator-10VgEJ, .da-emojiSeparator {display:none !important;}
+
+/* Always show timestamps */
+.timestampVisibleOnHover-2bQeI4, .da-timestampVisibleOnHover {opacity:100 !important;}
+
+/* Restore old style message hovers */
+.mouse-mode .message-2qnXI6:hover
+{
+    background-color:rgba(54, 57, 62, 0);
+}
+:root {
+    /* My custom css vars for stylizing */
+    /*Vertical shadows*/
+    --hard-shadow: 0 1px 5px rgba(0, 0, 0, 0.9), 0 1px 5px rgba(0, 0, 0, 0.9);
+    --soft-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 4px var(--mid-transp-black);
+
+    --mid-transp-black: rgba(0, 0, 0, 0.6);
+    --heavy-transp-black: rgba(0, 0, 0, 0.8);
+
+    /* Override for the new colors */
+    --blurple: #7289DA;
+    --discord-red: #f04747;
+    --discord-yellow: #faa61a;
+    --discord-green: #43B581;
+
+    --brand-experiment-100: #f8f9fd;
+    --brand-experiment-130: #f2f4fc;
+    --brand-experiment-160: #ebeefa;
+    --brand-experiment-200: #e3e7f8;
+    --brand-experiment-230: #dae0f5;
+    --brand-experiment-260: #d1d9f3;
+    --brand-experiment-300: #c7d0f0;
+    --brand-experiment-330: #b5c1ec;
+    --brand-experiment-360: #a5b3e7;
+    --brand-experiment-400: #8ea1e1;
+    --brand-experiment-430: #869adf;
+    --brand-experiment-460: #7d92dd;
+    --brand-experiment: #7289da;
+    --brand-experiment-500: #7289da;
+    --brand-experiment-530: #687dc6;
+    --brand-experiment-560: #5c6fb1;
+    --brand-experiment-600: #4e5d94;
+    --brand-experiment-630: #435180;
+    --brand-experiment-660: #3b4770;
+    --brand-experiment-700: #2e3757;
+    --brand-experiment-730: #2b3352;
+    --brand-experiment-760: #272f4b;
+    --brand-experiment-800: #222941;
+    --brand-experiment-830: #1a2032;
+    --brand-experiment-860: #111521;
+    --brand-experiment-900: #06070b;
+    --brand-experiment-05a: rgba(114,137,218,0.05);
+    --brand-experiment-10a: rgba(114,137,218,0.1);
+    --brand-experiment-15a: rgba(114,137,218,0.15);
+    --brand-experiment-20a: rgba(114,137,218,0.2);
+    --brand-experiment-25a: rgba(114,137,218,0.25);
+    --brand-experiment-30a: rgba(114,137,218,0.3);
+    --brand-experiment-35a: rgba(114,137,218,0.35);
+    --brand-experiment-40a: rgba(114,137,218,0.4);
+    --brand-experiment-45a: rgba(114,137,218,0.45);
+    --brand-experiment-50a: rgba(114,137,218,0.5);
+    --brand-experiment-55a: rgba(114,137,218,0.55);
+    --brand-experiment-60a: rgba(114,137,218,0.6);
+    --brand-experiment-65a: rgba(114,137,218,0.65);
+    --brand-experiment-70a: rgba(114,137,218,0.7);
+    --brand-experiment-75a: rgba(114,137,218,0.75);
+    --brand-experiment-80a: rgba(114,137,218,0.8);
+    --brand-experiment-85a: rgba(114,137,218,0.85);
+    --brand-experiment-90a: rgba(114,137,218,0.9);
+    --brand-experiment-95a: rgba(114,137,218,0.95);
+
+    --text-warning: var(--discord-yellow);
+    --text-danger: var(--discord-red);
+    --info-positive-background: rgba(59,165,92,0.1);
+    --info-positive-foreground: var(--discord-green);
+    --info-warning-background: rgba(250,166,26,0.1);
+    --info-warning-foreground: var(--discord-yellow);
+    --info-danger-background: rgba(237,66,69,0.1);
+    --info-danger-foreground: var(--discord-red);
+    --status-positive-background: var(--discord-green);
+    --status-positive-text: #fff;
+    --status-warning-background: #faa~61a;
+    --status-danger-background: var(--discord-red);
+    --status-danger-text: #fff;
+    --focus-primary: var(--blurple);
+    --text-link: var(--blurple);
+
+    /* The rest of the colors */
+    --header-primary: #fff;
+    --header-secondary: #b9bbbe;
+    --text-normal: #dcddde;
+    --text-muted: #72767d;
+    --text-link: #00b0f4;
+    --text-positive: #4fdc7b;
+    --interactive-normal: #b9bbbe;
+    --interactive-hover: #dcddde;
+    --interactive-active: #fff;
+    --interactive-muted: #4f545c;
+    --background-primary: #36393f;
+    --background-secondary: #2f3136;
+    --background-secondary-alt: #292b2f;
+    --background-tertiary: #202225;
+    --background-accent: #4f545c;
+    --background-floating: #18191c;
+    --background-mobile-primary: #36393f;
+    --background-mobile-secondary: #2f3136;
+    --background-modifier-hover: rgba(79,84,92,0.16);
+    --background-modifier-active: rgba(79,84,92,0.24);
+    --background-modifier-selected: rgba(79,84,92,0.32);
+    --background-modifier-accent: hsla(0,0%,100%,0.06);
+    --info-positive-text: #fff;
+    --info-warning-text: #fff;
+    --info-danger-text: #fff;
+    --info-help-background: rgba(0,176,244,0.1);
+    --info-help-foreground: var(--blurple);
+    --info-help-text: #fff;
+    --status-warning-text: #000;
+    --scrollbar-thin-thumb: #202225;
+    --scrollbar-thin-track: transparent;
+    --scrollbar-auto-thumb: #202225;
+    --scrollbar-auto-track: #2e3338;
+    --scrollbar-auto-scrollbar-color-thumb: #202225;
+    --scrollbar-auto-scrollbar-color-track: #2f3136;
+    --elevation-stroke: 0 0 0 1px rgba(4,4,5,0.15);
+    --elevation-low: 0 1px 0 rgba(4,4,5,0.2),0 1.5px 0 rgba(6,6,7,0.05),0 2px 0 rgba(4,4,5,0.05);
+    --elevation-medium: 0 4px 4px rgba(0,0,0,0.16);
+    --elevation-high: 0 8px 16px rgba(0,0,0,0.24);
+    --logo-primary: #fff;
+    --control-brand-foreground: #a5b3e7;
+    --background-mentioned: rgba(250,166,26,0.1);
+    --background-mentioned-hover: rgba(250,166,26,0.08);
+    --background-message-hover: rgba(4,4,5,0.07);
+    --channels-default: #8e9297;
+    --guild-header-text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    --channeltextarea-background: #40444b;
+    --activity-card-background: #202225;
+    --textbox-markdown-syntax: #8e9297;
+    --deprecated-card-bg: rgba(32,34,37,0.6);
+    --deprecated-card-editable-bg: rgba(32,34,37,0.3);
+    --deprecated-store-bg: #36393f;
+    --deprecated-quickswitcher-input-background: #72767d;
+    --deprecated-quickswitcher-input-placeholder: hsla(0,0%,100%,0.3);
+    --deprecated-text-input-bg: rgba(0,0,0,0.1);
+    --deprecated-text-input-border: rgba(0,0,0,0.3);
+    --deprecated-text-input-border-hover: #040405;
+    --deprecated-text-input-border-disabled: #202225;
+    --deprecated-text-input-prefix: #dcddde;
+}
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+@-webkit-keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+.isSending-9nvak6 {
+    display:none;
+}
+.message-2qnXI6 {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeInBottom;
+}
+.botTagRegular-2HEhHi {
+    background: var(--blurple);
+}
+.wrapper-2aW0bm
+{
+    position:relative;
+    top:22px;
+    box-shadow: none;
+    border-radius: 0px;
+    background-color:rgba(54, 57, 62, 0);
+}
+.wrapper-2aW0bm:hover
+{
+    background-color:rgba(0, 0, 0, 0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.markup-2BOw-j
+{
+    line-height: 1.3rem;
+}
+.message-2qnXI6
+{
+    padding-top:0px;
+    padding-bottom:0px;
+    padding-right:70px;
+}
+.group-spacing-16 .divider-3_HH5L.beforeGroup-1rH1F0 {
+    top: 18px;
+    text-align: center;
+}
+.unreadPill-2HyYtt, .unreadPillCap-3_K2q2 {
+    position: initial;
+}
+.unreadPillCapStroke-7rkHbg {
+    display: none;
+}
+.unreadPillCap-3_K2q2 {
+    display: none;
+}
+.unreadPill-2HyYtt {
+    display: none;
+}
+.isUnread-3Ef-o9 {
+    border-color: var(--discord-red);
+}
+.isUnread-3Ef-o9:after {
+    content: "NEW MESSAGES";
+    font-weight: bold;
+    display: block;
+    color: var(--discord-red);
+    background-color: var(--background-primary);
+    padding: 4px 20px;
+    font-size: 14px;
+}
+.content-1o0f9g {
+    display: none;
+}
+.scrollableContainer-2NUZem
+{
+    border-radius:1px;
+}
+/* Typing area */
+.form-2fGMdU
+{
+    height: 53px;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0;
+    padding-left: 6px;
+    padding-right: 6px;
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+    clip-path: inset(-1500px 0px 0px 0px);
+}
+/* Reply banner */
+.container-2fRDfG {
+    border-radius: 0;
+    position: absolute;
+    float: right;
+    bottom: 70px;
+    right: 18px;
+    z-index: -1;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: fadeInBottom;
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+}
+.mentionButton-3710-W {
+    color: var(--blurple);
+}
+/* Disable extra dum thing in textbox*/
+.form-2fGMdU:before {
+    display: none;
+}
+.channelTextArea-rNsIhG.channelTextArea-2VhZ6z {
+    margin-top: 4px;
+    height: 52px;
+}
+/* User Settings */
+.container-3baos1 {
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+    clip-path: inset(-1500px 0px 0px 0px);
+}
+/* User Settings Buttons*/
+.button-14-BFJ {
+    line-height: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    position: relative;
+    color: var(--interactive-normal);
+    background-color: rgba(50, 50, 50, 0.1);
+    border: 1px solid rgba(50, 50, 50, 1);
+    box-shadow: 0 1px 1px var(--mid-transp-black), 0 1px 1px var(--mid-transp-black);
+}
+/* Chat right side shadow */
+.chatContent-a9vAAp {
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 0px var(--mid-transp-black);
+    clip-path: inset(0px -15px 0px 0px);
+    z-index: 1;
+}
+/* Members section*/
+.members-1998pB, .members-1998pB>div {
+    z-index: 0
+}
+/* Is typing container */
+.typing-2GQL18 {
+    bottom: 52px;
+    opacity: 0.5;
+}
+/* Replies */
+.repliedMessage-VokQwo:before {
+    border-radius: 0;
+}
+.title-3qD0b-.container-1r6BKw.themed-ANHk51, .header-2V-4Sw, .searchBar-6Kv8R2 {
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 0px var(--mid-transp-black);
+    clip-path: inset(0px 0px -15px 0px);
+}
+.autocomplete-3l_oCd {
+    border-radius: 1px;
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+}
+.theme-dark .autocomplete-1vrmpx, .menu-3sdvDG.styleFlexible-wGDiIL {
+    border-radius: 1px;
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+    background-color: var(--mid-transp-black);
+}
+.layout-2DM8Md
+{
+    border-radius:1px;
+}
+.searchBar-3dMhjb, .da-searchBar
+{
+    border-radius:0;
+}
+.jumpToPresentBar-G1R9s6, .barBase-1c2Rfb {
+    border-radius: 0;
+    opacity: 0.3;
+}
+.barBase-1c2Rfb {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.jumpToPresentBar-G1R9s6 {
+    padding-bottom: 0;
+}
+
+.searchBar-6Kv8R2
+{
+    border-radius:0;
+}
+.input-2VB9rf, .da-input
+{
+    border-radius:1px;
+}
+.result-oB0z--
+{
+    border-radius:1px;
+}
+.newMessagesBar-mujexs, .barBase-39XTcM, .da-newMessagesBar, .da-barBase
+{
+    border-radius:1px;
+}
+.container-3FojY8
+{
+    padding: 0rem 16px 0rem 72px;
+}
+.container-35XQWE
+{
+    padding:0;
+}
+.bar-30k2ka
+{
+    border-radius:0;
+}
+.content-3at_AU
+{
+    border-radius:0;
+}
+.side-8zPYf6 .item-PXvHYJ
+{
+    border-radius:0;
+}
+.reaction-1hd86g
+{
+    border-radius:1px;
+}
+.groupStart-23k01U {
+    margin-top: 0.53125rem;
+}
+.groupStart-23k01U:before
+{
+    content: '';
+    padding-top: 5px;
+    border-top: 1px solid var(--background-modifier-accent);
+    display: block;
+    padding-bottom: 5px;
+    margin-left: -50px;
+    margin-right: -20px;
+}
+.base-PmTxvP
+{
+    border-radius:2px;
+    min-height:17px;
+}
+.contextMenu-HLZMGh
+{
+    border-radius:2px;
+}
+.role-2irmRk
+{
+    border-radius: 2px;
+}
+.wrap-ZIn9Iy
+{
+    flex-direction: column;
+}
+.theme-dark .spoilerText-3p6IlD
+{
+    background-color: hsla(0,0%,100%,.03);
+}
+.reactionBtn-3N03Zj
+{
+    padding-left:3px;
+}
+.compact-T3H92H.wrapper-2a6GCs, .cozy-3raOZG.wrapper-2a6GCs
+{
+    padding-bottom: 0;
+}
+.button-1I8KM5
+{
+    border-radius: 2px;
+}
+.icon-QsFCBC
+{
+    width:32px;
+    height:32px;
+}
+
+button[aria-label="Send a gift"] {
+    display: none;
+}
+
+button[aria-label="Open GIF picker"] {
+    display: none;
+}
+
+button[aria-label="Open sticker picker"] {
+    display: none;
+}
+
+.clickableSticker-3HmpgV {
+    display: none;
+}
+
+.theme-dark .wrapper-3WhCwL {
+    color: #7289da;
+    background: #11111115;
+    overflow: hidden;
+}
+.wrapper-3WhCwL {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.wrapper-3WhCwL:hover {
+    transition: 0.3s;
+    opacity: 1;
+}
+.platform-win .sidebar-2K8pFh {
+    border-radius: 1px;
+}
+.sidebar-2K8pFh {
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 0px var(--mid-transp-black);
+    z-index: 1;
+    clip-path: inset(0px -15px 0px 0px);
+}
+rect[mask="url(#svg-mask-status-online)"], rect[mask="url(#svg-mask-status-online-mobile)"], rect[mask="url(#6bf466bb-9160-4874-a460-ec755d12d136)"] {
+    fill: var(--discord-green)
+}
+
+/* Settings menu on switches */
+.container-3auIfb[style="opacity: 1; background-color: rgb(59, 165, 92);"] {
+    background-color: var(--discord-green) !important;
+}
+
+/* Change all radio bars with the new green to the old green */
+/* In particular, this fixes the privacy and safety settings' 'keep me safe' option */
+.radioBar-bMNUI-[style*="--radio-bar-accent-color:#3ba55c"] {
+    --radio-bar-accent-color: var(--discord-green) !important;
+}
+
+/* Online status (typing and other) */
+.wrapper-3t9DeA svg.cursorDefault-dsQJ1n > rect[fill="#3ba55c"] {
+    fill: var(--discord-green);
+}
+
+rect[mask="url(#svg-mask-status-dnd)"] {
+    fill: var(--discord-red)
+}
+
+.cardFolder-28dwxo {
+    display: none;
+}
+
+.iconBadge-qZ4Ksk {
+    background-color: var(--discord-red);
+}
+
+.reaction-1hd86g.reactionMe-wv5HKu {
+    border-color: transparent;
+}
+
+.wrapper-3NnKdC.guilds-1SWlCJ, .wrapper-3Njo_c {
+    width: 50px;
+}
+
+.expandedFolderBackground-1cujaW {
+    left: 0
+}
+
+.listItem-GuPuDH {
+    width: 48px;
+}
+
+.unreadMentionsIndicatorBottom-2mDYbI, .unreadMentionsIndicatorTop-2-tcdU {
+    padding-top: 0;
+    width: auto;
+    padding: 0;
+    height: 0;
+}
+.container-16j22k.fixClipping-3qAKRb {
+    border-radius: 1px;
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+    background-color: var(--mid-transp-black);
+    content: "Sit tight! Your internet has disconnected";
+}
+
+.tip-2cgoli {
+    display: none;
+}
