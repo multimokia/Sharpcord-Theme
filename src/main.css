@@ -231,10 +231,6 @@
 .content-1o0f9g {
     display: none;
 }
-.scrollableContainer-2NUZem
-{
-    border-radius:1px;
-}
 /* Typing area */
 .form-2fGMdU
 {
@@ -263,16 +259,26 @@
     animation-name: fadeInBottom;
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
 }
+/* Fix the color of the mention button when replying */
 .mentionButton-3710-W {
     color: var(--blurple);
+}
+/* Better Textbox */
+.scrollableContainer-2NUZem {
+    border-radius: 1px;
+    top: 3px;
+    position: relative;
 }
 /* Disable extra dum thing in textbox*/
 .form-2fGMdU:before {
     display: none;
 }
+/* Disable extra padding when large text */
+.channelTextArea-rNsIhG {
+    padding-bottom: 0;
+}
 .channelTextArea-rNsIhG.channelTextArea-2VhZ6z {
-    margin-top: 4px;
-    height: 52px;
+    min-height: 52px;
 }
 /* User Settings */
 .container-3baos1 {
