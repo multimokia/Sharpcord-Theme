@@ -234,7 +234,8 @@
 /* Typing area */
 .form-2fGMdU
 {
-    height: 53px;
+    min-height: 53px;
+    max-height: 500px;
     flex-shrink: 0;
     margin-top: 0;
     margin-left: 0;
@@ -244,6 +245,7 @@
     padding-right: 6px;
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
     clip-path: inset(-1500px 0px 0px 0px);
+    overflow: auto;
 }
 /* Reply banner */
 .container-2fRDfG {
@@ -276,6 +278,7 @@
 /* Disable extra padding when large text */
 .channelTextArea-rNsIhG {
     padding-bottom: 0;
+    margin-bottom: 0;
 }
 .channelTextArea-rNsIhG.channelTextArea-2VhZ6z {
     min-height: 52px;
