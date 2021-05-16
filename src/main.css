@@ -283,6 +283,9 @@
 .channelTextArea-rNsIhG.channelTextArea-2VhZ6z {
     min-height: 52px;
 }
+.textArea-12jD-V {
+    height: auto !important;
+}
 /* User Settings */
 .container-3baos1 {
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
