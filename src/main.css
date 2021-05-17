@@ -595,7 +595,7 @@ rect[mask="url(#svg-mask-status-dnd)"] {
 
 /* Fix reaction border and make em more squared off */
 .reaction-1hd86g {
-    border-color: transparent;
+    border-color: transparent !important;
     border-radius: 1px;
 }
 .reactionBtn-3N03Zj
