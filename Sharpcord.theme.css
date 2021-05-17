@@ -6,4 +6,7 @@
  * @source https://github.com/multimokia/Sharpcord-Theme
 */
 
+:root {
+    --emoji-size: 3rem;
+}
 @import url("https://multimokia.github.io/Sharpcord-Theme/src/main.css");

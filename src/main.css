@@ -1,14 +1,3 @@
-.nowPlayingColumn-2sl4cE, .da-nowPlayingColumn {display:none !important;}
-.emojiSeparator-10VgEJ, .da-emojiSeparator {display:none !important;}
-
-/* Always show timestamps */
-.timestampVisibleOnHover-2bQeI4, .da-timestampVisibleOnHover {opacity:100 !important;}
-
-/* Restore old style message hovers */
-.mouse-mode .message-2qnXI6:hover
-{
-    background-color:rgba(54, 57, 62, 0);
-}
 :root {
     /* My custom css vars for stylizing */
     /*Vertical shadows*/
@@ -164,18 +153,36 @@
     to { opacity: 1 }
 }
 
+.nowPlayingColumn-2sl4cE, .da-nowPlayingColumn {display:none !important;}
+.emojiSeparator-10VgEJ, .da-emojiSeparator {display:none !important;}
+
+/* Always show timestamps */
+.timestampVisibleOnHover-2bQeI4, .da-timestampVisibleOnHover {opacity:100 !important;}
+
+/* Restore old style message hovers */
+.mouse-mode .message-2qnXI6:hover
+{
+    background-color:rgba(54, 57, 62, 0);
+}
+
+/* We hide the is-sending message for the animation */
 .isSending-9nvak6 {
     display:none;
 }
+
+/* Message send anim */
 .message-2qnXI6 {
     opacity: 0;
     animation-duration: 0.5s;
     animation-fill-mode: both;
     animation-name: fadeInBottom;
 }
+
+/* Fix bot-tag color */
 .botTagRegular-2HEhHi {
     background: var(--blurple);
 }
+
 .wrapper-2aW0bm
 {
     position:relative;
@@ -194,16 +201,19 @@
 {
     line-height: 1.3rem;
 }
+/* Re-adjust message widths and heights */
 .message-2qnXI6
 {
     padding-top:0px;
     padding-bottom:0px;
     padding-right:70px;
 }
+/* Restore the old style unread indicator */
 .group-spacing-16 .divider-3_HH5L.beforeGroup-1rH1F0 {
     top: 18px;
     text-align: center;
 }
+/* Remove the unread pill (NEW tag) */
 .unreadPill-2HyYtt, .unreadPillCap-3_K2q2 {
     position: initial;
 }
@@ -216,9 +226,13 @@
 .unreadPill-2HyYtt {
     display: none;
 }
+
+/* Use old red for line color */
 .isUnread-3Ef-o9 {
     border-color: var(--discord-red);
 }
+
+/* Use a pseudo element to create the old style indicator, as we can't modify content directly */
 .isUnread-3Ef-o9:after {
     content: "NEW MESSAGES";
     font-weight: bold;
@@ -228,9 +242,11 @@
     padding: 4px 20px;
     font-size: 14px;
 }
+/* Hide the old unread indicator */
 .content-1o0f9g {
     display: none;
 }
+
 /* Typing area */
 .form-2fGMdU
 {
@@ -247,7 +263,9 @@
     clip-path: inset(-1500px 0px 0px 0px);
     height: auto !important;
 }
-/* Reply banner */
+
+/* Reply banner converted to reply modal */
+/* TODO: Swap placement of this with the is-typing indicator */
 .container-2fRDfG {
     border-radius: 0;
     position: absolute;
@@ -261,7 +279,8 @@
     animation-name: fadeInBottom;
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
 }
-/* Is typing banner */
+
+/* Is typing banner converted to modal */
 .typing-2GQL18 {
     top: -90px;
     position: absolute;
@@ -275,18 +294,22 @@
     background: var(--background-secondary);
     text-align: right;
 }
+
 /* Add some extra padding for the slowmode banner */
 .cooldownWrapper-3joyFc {
     padding-left: 5px;
 }
+
 /* Fix the left alignment of the typing banner */
 .base-gE7OpD {
     left: unset;
 }
+
 /* Fix the color of the mention button when replying */
 .mentionButton-3710-W {
     color: var(--blurple);
 }
+
 /* Better Textbox */
 .scrollableContainer-2NUZem {
     border-radius: 1px;
@@ -295,23 +318,29 @@
     width: 100%;
     scrollbar-width: none;
 }
+
 /* Disable extra dum thing in textbox*/
 .form-2fGMdU:before {
     display: none;
 }
+
 /* Disable extra padding when large text */
 .channelTextArea-rNsIhG {
     padding-bottom: 0;
     margin-bottom: 0;
 }
+
+/* Set a base height for the textarea so it's consistent with the user settings block */
 .channelTextArea-rNsIhG.channelTextArea-2VhZ6z {
     min-height: 52px;
 }
+
 /* User Settings */
 .container-3baos1 {
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
     clip-path: inset(-1500px 0px 0px 0px);
 }
+
 /* User Settings Buttons*/
 .button-14-BFJ {
     line-height: 0;
@@ -324,38 +353,47 @@
     border: 1px solid rgba(50, 50, 50, 1);
     box-shadow: 0 1px 1px var(--mid-transp-black), 0 1px 1px var(--mid-transp-black);
 }
+
 /* Chat right side shadow */
 .chatContent-a9vAAp {
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 0px var(--mid-transp-black);
     clip-path: inset(0px -15px 0px 0px);
     z-index: 1;
 }
+
 /* Members section*/
 .members-1998pB, .members-1998pB>div {
     z-index: 0;
 }
+
 /* Reply in chat connector */
 .repliedMessage-VokQwo:before {
     border-radius: 0;
 }
+
 /* Server name + Channel name bar shadow */
 .title-3qD0b-.container-1r6BKw.themed-ANHk51, .header-2V-4Sw, .searchBar-6Kv8R2 {
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 0px var(--mid-transp-black);
     clip-path: inset(0px 0px -15px 0px);
 }
+
 /* Make the message hover icons a bit smaller */
 .icon-3Gkjwa {
     width: 15px;
     height: 15px;
 }
+
 /* And remove the padding between the buttons */
 .button-1ZiXG9 {
     padding: 0;
 }
+
+/* More shadows */
 .autocomplete-3l_oCd {
     border-radius: 1px;
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
 }
+
 .theme-dark .autocomplete-1vrmpx, .menu-3sdvDG.styleFlexible-wGDiIL {
     border-radius: 1px;
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
@@ -365,27 +403,26 @@
 {
     border-radius:1px;
 }
+/* Sharper edged searchbar */
 .searchBar-3dMhjb, .da-searchBar
 {
     border-radius:0;
 }
-.jumpToPresentBar-G1R9s6, .barBase-1c2Rfb {
-    border-radius: 0;
-    opacity: 0.3;
-}
-/* Bars indicating position in chat (new unreads/viewing old messages) */
+
+/* Bars indicating position in chat (new unreads/viewing old messages/Message failed to send) */
 .barBase-1c2Rfb {
     width: 100%;
     left: 0;
     right: 0;
+    border-radius: 0;
+    opacity: 0.3;
 }
-/* Remove bottom padding from message error bar */
-.messagesErrorBar-nyJGU7 {
+
+/* Remove bottom padding from bars which sit above the textbox */
+.messagesErrorBar-nyJGU7, .jumpToPresentBar-G1R9s6 {
     padding-bottom: 0;
 }
-.jumpToPresentBar-G1R9s6 {
-    padding-bottom: 0;
-}
+
 /* Make searchbar more square */
 .searchBar-6Kv8R2
 {
@@ -423,6 +460,7 @@
 {
     border-radius:0;
 }
+/* Add line separators back in */
 .groupStart-23k01U {
     margin-top: 0.53125rem;
 }
@@ -445,22 +483,22 @@
 {
     border-radius:2px;
 }
+/* Square out roles in the role list on the user popout */
 .role-2irmRk
 {
     border-radius: 2px;
 }
+/* modify flex so it organizes itself a lil better */
 .wrap-ZIn9Iy
 {
     flex-direction: column;
 }
+/* Tweak spoiler text */
 .theme-dark .spoilerText-3p6IlD
 {
     background-color: hsla(0,0%,100%,.03);
 }
-.reactionBtn-3N03Zj
-{
-    padding-left:3px;
-}
+
 .compact-T3H92H.wrapper-2a6GCs, .cozy-3raOZG.wrapper-2a6GCs
 {
     padding-bottom: 0;
@@ -492,6 +530,7 @@ button[aria-label="Open sticker picker"] {
 .clickableSticker-3HmpgV {
     display: none;
 }
+
 /* Mention things */
 .theme-dark .wrapper-3WhCwL {
     color: #7289da;
@@ -550,10 +589,21 @@ rect[mask="url(#svg-mask-status-dnd)"] {
 .iconBadge-qZ4Ksk {
     background-color: var(--discord-red);
 }
+
 /* Fix reaction border and make em more squared off */
-.reaction-1hd86g.reactionMe-wv5HKu {
+.reaction-1hd86g {
     border-color: transparent;
-    border-radius:1px;
+    border-radius: 1px;
+}
+.reactionBtn-3N03Zj
+{
+    padding-left:3px;
+}
+
+/* Resizeable emotes */
+.emoji.jumboable {
+    width: var(--emoji-size);
+    height: var(--emoji-size);
 }
 .wrapper-3NnKdC.guilds-1SWlCJ, .wrapper-3Njo_c {
     width: 50px;
