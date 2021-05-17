@@ -7,6 +7,9 @@
     --mid-transp-black: rgba(0, 0, 0, 0.6);
     --heavy-transp-black: rgba(0, 0, 0, 0.8);
 
+    /* Configurables */
+    --emoji-size: 3rem;
+
     /* Override for the new colors */
     --blurple: #7289DA;
     --discord-red: #f04747;
