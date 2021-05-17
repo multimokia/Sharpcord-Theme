@@ -187,8 +187,8 @@
 .wrapper-2aW0bm:hover
 {
     background-color:rgba(0, 0, 0, 0);
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
 }
 .markup-2BOw-j
 {
@@ -245,21 +245,43 @@
     padding-right: 6px;
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
     clip-path: inset(-1500px 0px 0px 0px);
+    height: auto !important;
 }
 /* Reply banner */
 .container-2fRDfG {
     border-radius: 0;
-    position: relative;
-    top: -5px;
+    position: absolute;
+    top: -50px;
     float: right;
-    bottom: 70px;
     right: 18px;
-    z-index: -1;
+    z-index: 1;
     opacity: 0;
     animation-duration: 0.5s;
     animation-fill-mode: both;
     animation-name: fadeInBottom;
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+}
+/* Is typing banner */
+.typing-2GQL18 {
+    top: -90px;
+    position: absolute;
+    right: 25px;
+    height: 32px;
+    overflow: hidden;
+    width: auto;
+    z-index: 1;
+    box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 10px var(--mid-transp-black);
+    padding-right: 10px;
+    background: var(--background-secondary);
+    text-align: right;
+}
+/* Add some extra padding for the slowmode banner */
+.cooldownWrapper-3joyFc {
+    padding-left: 5px;
+}
+/* Fix the left alignment of the typing banner */
+.base-gE7OpD {
+    left: unset;
 }
 /* Fix the color of the mention button when replying */
 .mentionButton-3710-W {
@@ -270,6 +292,8 @@
     border-radius: 1px;
     top: 3px;
     position: relative;
+    width: 100%;
+    scrollbar-width: none;
 }
 /* Disable extra dum thing in textbox*/
 .form-2fGMdU:before {
@@ -282,9 +306,6 @@
 }
 .channelTextArea-rNsIhG.channelTextArea-2VhZ6z {
     min-height: 52px;
-}
-.textArea-12jD-V {
-    height: auto !important;
 }
 /* User Settings */
 .container-3baos1 {
@@ -311,20 +332,25 @@
 }
 /* Members section*/
 .members-1998pB, .members-1998pB>div {
-    z-index: 0
+    z-index: 0;
 }
-/* Is typing container */
-.typing-2GQL18 {
-    bottom: 52px;
-    opacity: 0.5;
-}
-/* Replies */
+/* Reply in chat connector */
 .repliedMessage-VokQwo:before {
     border-radius: 0;
 }
+/* Server name + Channel name bar shadow */
 .title-3qD0b-.container-1r6BKw.themed-ANHk51, .header-2V-4Sw, .searchBar-6Kv8R2 {
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 0px var(--mid-transp-black);
     clip-path: inset(0px 0px -15px 0px);
+}
+/* Make the message hover icons a bit smaller */
+.icon-3Gkjwa {
+    width: 15px;
+    height: 15px;
+}
+/* And remove the padding between the buttons */
+.button-1ZiXG9 {
+    padding: 0;
 }
 .autocomplete-3l_oCd {
     border-radius: 1px;
@@ -347,15 +373,20 @@
     border-radius: 0;
     opacity: 0.3;
 }
+/* Bars indicating position in chat (new unreads/viewing old messages) */
 .barBase-1c2Rfb {
     width: 100%;
     left: 0;
     right: 0;
 }
+/* Remove bottom padding from message error bar */
+.messagesErrorBar-nyJGU7 {
+    padding-bottom: 0;
+}
 .jumpToPresentBar-G1R9s6 {
     padding-bottom: 0;
 }
-
+/* Make searchbar more square */
 .searchBar-6Kv8R2
 {
     border-radius:0;
@@ -391,10 +422,6 @@
 .side-8zPYf6 .item-PXvHYJ
 {
     border-radius:0;
-}
-.reaction-1hd86g
-{
-    border-radius:1px;
 }
 .groupStart-23k01U {
     margin-top: 0.53125rem;
@@ -448,6 +475,7 @@
     height:32px;
 }
 
+/* Hide extra buttons in textbar */
 button[aria-label="Send a gift"] {
     display: none;
 }
@@ -460,10 +488,11 @@ button[aria-label="Open sticker picker"] {
     display: none;
 }
 
+/* Hide stickers */
 .clickableSticker-3HmpgV {
     display: none;
 }
-
+/* Mention things */
 .theme-dark .wrapper-3WhCwL {
     color: #7289da;
     background: #11111115;
@@ -480,11 +509,15 @@ button[aria-label="Open sticker picker"] {
 .platform-win .sidebar-2K8pFh {
     border-radius: 1px;
 }
+
+/* Vertical shadow for some depth */
 .sidebar-2K8pFh {
     box-shadow: 0 1px 6px var(--mid-transp-black), 0 1px 0px var(--mid-transp-black);
     z-index: 1;
     clip-path: inset(0px -15px 0px 0px);
 }
+
+/* Online type statuses (mobile as well) */
 rect[mask="url(#svg-mask-status-online)"], rect[mask="url(#svg-mask-status-online-mobile)"], rect[mask="url(#6bf466bb-9160-4874-a460-ec755d12d136)"] {
     fill: var(--discord-green)
 }
@@ -505,6 +538,7 @@ rect[mask="url(#svg-mask-status-online)"], rect[mask="url(#svg-mask-status-onlin
     fill: var(--discord-green);
 }
 
+/* Do-not-disturb status */
 rect[mask="url(#svg-mask-status-dnd)"] {
     fill: var(--discord-red)
 }
@@ -516,11 +550,11 @@ rect[mask="url(#svg-mask-status-dnd)"] {
 .iconBadge-qZ4Ksk {
     background-color: var(--discord-red);
 }
-
+/* Fix reaction border and make em more squared off */
 .reaction-1hd86g.reactionMe-wv5HKu {
     border-color: transparent;
+    border-radius:1px;
 }
-
 .wrapper-3NnKdC.guilds-1SWlCJ, .wrapper-3Njo_c {
     width: 50px;
 }
@@ -532,7 +566,6 @@ rect[mask="url(#svg-mask-status-dnd)"] {
 .listItem-GuPuDH {
     width: 48px;
 }
-
 .unreadMentionsIndicatorBottom-2mDYbI, .unreadMentionsIndicatorTop-2-tcdU {
     padding-top: 0;
     width: auto;
