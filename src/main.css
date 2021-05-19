@@ -317,11 +317,6 @@
     left: unset;
 }
 
-/* Fix the color of the mention button when replying */
-.mentionButton-3710-W {
-    color: var(--blurple);
-}
-
 /* Better Textbox */
 .scrollableContainer-2NUZem {
     border-radius: 1px;
