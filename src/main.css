@@ -651,6 +651,10 @@ rect[mask="url(#svg-mask-status-dnd)"] {
     100% { transform: scale(1.1);}
 }
 
+@keyframes rotator {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(359deg);}
+}
 @keyframes blinkingText {
     0% {
         opacity: 0;
@@ -680,7 +684,8 @@ rect[mask="url(#svg-mask-status-dnd)"] {
     padding: 0px;
     background: transparent !important;
     border: 2px dashed gold;
-    animation: blinkingText 5s infinite, 3s transformScale ease alternate infinite;
+    animation: blinkingText 5s infinite, 3s transformScale ease alternate infinite, 2s rotator infinite;
+    animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 /* Expand the pill */
