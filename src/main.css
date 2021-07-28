@@ -641,3 +641,50 @@ rect[mask="url(#svg-mask-status-dnd)"] {
 .tip-2cgoli {
     display: none;
 }
+
+/* Disable the stickers menu from the emoji flyout */
+.navItem-3Wp_oJ[id="sticker-picker-tab"] {
+    display: none;
+}
+
+@keyframes transformScale {
+    100% { transform: scale(1.1);}
+}
+
+@keyframes blinkingText {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Fix the new messages indicator */
+.item-2hkk8m {
+    opacity: 1;
+    height: 100% !important;
+    width: 100%;
+    transform: none;
+    border-radius: 100px;
+    left: 3px;
+    padding: 0px;
+    background: transparent !important;
+    border: 2px dashed gold;
+    animation: blinkingText 5s infinite, 3s transformScale ease alternate infinite;
+}
+
+/* Expand the pill */
+.pill-1z4sAY {
+    height: 100%;
+    width: 100%;
+}
